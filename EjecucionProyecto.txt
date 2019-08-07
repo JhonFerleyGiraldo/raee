@@ -1,0 +1,5 @@
+EN el archivo .htaccess se configura el ruteo, haciendo que 
+siempre las peticiones vayan a el index.php de la carpeta principal
+y se puede enviar como parametro el controlador y metodo al cual se desea acceder a traves de
+el codigo de index.php
+Tambien en la carpeta config esta los parametos de conexion

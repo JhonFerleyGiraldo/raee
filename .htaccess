@@ -1,0 +1,7 @@
+RewriteEngine On
+#para peticiones normales de css y js no habra regla
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+#nueva regla de ruteo
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
