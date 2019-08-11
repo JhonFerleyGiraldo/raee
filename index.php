@@ -2,6 +2,7 @@
 
     //Llamado a clases php
     require_once("controllers/ControllerErrores.php");
+    require_once("config/database.php");
 
     //llamamos clase encargada de validar los archivos y metodos cargados, 
     //y realizar los llamados de enrutamiento
@@ -9,18 +10,20 @@
 
     //Clase encargada de administrar las rutas, el controlador y el metodo a ejecutar
     //Autor: Jhon Giraldo
-    //Fecha: 2019-07-08
+    //Fecha: 2019-08-07
     class Enrutamiento{
 
         //Configurar la iniciacion de clase y metodo a ejecutar
         //Autor: Jhon Giraldo
-        //Fecha: 2019-07-08
+        //Fecha: 2019-08-07
         public function __construct(){
             
+
             //Validamos si hay parametros solicitados por url (configuracion en .htaccess)
             if(isset($_GET["url"])){
 
                 $urlSolicitada=$_GET["url"]; //almacena su valor en $urlSolicitada
+                
                 $urlSolicitada=rtrim($urlSolicitada,"/"); //toma la cadena de texto incluyendo /
                 $urlSolicitada=explode("/",$urlSolicitada); //crea un arreglo dividido por /
 
@@ -75,7 +78,10 @@
             
             //Si no hay parametros url, nos encontramos en el home de el proyecto
             }else{
-                echo "vacio, aca va el index o login";
+                //llamamos el controlador login
+                require_once("controllers/ControllerLogin.php");             
+                $login=new ControllerLogin();
+                $login->mostrarVista();
             }
         }
         

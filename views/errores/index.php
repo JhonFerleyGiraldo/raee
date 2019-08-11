@@ -75,7 +75,7 @@ body{
    //abre ventana modal
     //param idModal : id de la ventana modal
     //autor: Jhon Giraldo
-    //fecha: 2019-07-08
+    //fecha: 2019-08-07
     function getModal(idModal){
       $(idModal).show();
     }
@@ -83,7 +83,7 @@ body{
     //cierra ventana modal
     //param idModal : id de la ventana modal
     //autor: Jhon Giraldo
-    //fecha: 2019-07-08
+    //fecha: 2019-08-07
     function closeModal(idModal){
       $(idModal).hide();
     }

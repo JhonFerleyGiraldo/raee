@@ -6,7 +6,7 @@
 
     //Clase encargada de el manejo de errores
     //Autor: Jhon Giraldo
-    //Fecha: 2019-07-08
+    //Fecha: 2019-08-07
     class ControllerErrores extends ControllerBase{
 
         //Constantes para errores
@@ -19,12 +19,12 @@
             parent::__construct();
             $mensaje=$this->mensajeError($codigoError);
             $this->view->mensajeError=$mensaje;
-            $this->view->getVista('Errores/index');
+            $this->view->getVista('errores/index');
         }
 
         //Metodo que valida cual tipo de error es y lo devuelve
         //Autor: Jhon Giraldo
-        //Fecha: 2019-07-08
+        //Fecha: 2019-08-07
         public function mensajeError($codError){
 
             $result="";

@@ -5,7 +5,7 @@
 //la constante para ruta inicial del proyecto,
 //y la configuracion de caracteres
 //autor: Jhon Giraldo
-//fecha : 2019-07-08
+//fecha : 2019-08-07
 
 define('URL', 'http://localhost/Desarrollo/raee/');
 
